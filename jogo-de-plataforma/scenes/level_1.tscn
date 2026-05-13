@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://7h4qhuciarsy"]
+
+[ext_resource type="Texture2D" uid="uid://d1rk5t1vfpuk6" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/sand.png" id="1_bswci"]
+[ext_resource type="PackedScene" uid="uid://docedknkg0sfc" path="res://scenes/player.tscn" id="2_rus8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
+size = Vector2(267, 74)
+
+[node name="level 1" type="Node2D" unique_id=1103286154]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=933461589]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1662696994]
+position = Vector2(205.5, 157)
+scale = Vector2(3.7857144, 1.0571429)
+texture = ExtResource("1_bswci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=682869569]
+position = Vector2(205.5, 157)
+shape = SubResource("RectangleShape2D_ihfcg")
+
+[node name="Player" parent="." unique_id=1474370631 instance=ExtResource("2_rus8k")]
+position = Vector2(107, 81)
